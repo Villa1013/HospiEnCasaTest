@@ -11,7 +11,7 @@ namespace HospiEnCasa.App.Persistencia
         //public DbSet<Medico> Medicos{get;set;}
         //public DbSet<FamiliarDesignado> familiarDesignado{get;set;}
         //public DbSet<Historia> Historia{get;set;}
-        //public DbSet<Paciente> Paciente{get;set;}
+        public DbSet<Paciente> Pacientes{get;set;}
         //public DbSet<SugerenciaCuidados> SugerenciaCuidados{get;set;}
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) //Variable del ef
         {
