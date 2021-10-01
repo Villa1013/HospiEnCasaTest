@@ -20,7 +20,7 @@ namespace HospiEnCasa.App.Consola
                 Nombre = "MisionTIC",
                 Apellidos = "Ciclo3",
                 NumeroTelefono = "7777777",
-                Genero = Genero.Masculino,
+                Genero = Genero.masculino,
                 Direccion = "calle 4 No 7-4",
                 Longitud = 5.07062F,
                 Latitud = -75.52290F,
@@ -28,6 +28,12 @@ namespace HospiEnCasa.App.Consola
                 FechaNacimiento = new DateTime(1990, 04, 12)
             };
             _repoPaciente.AddPaciente(paciente);
-        } 
+        }
+
+        private static void BuscarPaciente(int idPaciente) 
+        {
+            var paciente = _repoPaciente.GetPaciente(idPaciente);
+            Consola.WriteLine(paciente.Nombre + " "+paciente.Apellidos);
+        }
     }
 }

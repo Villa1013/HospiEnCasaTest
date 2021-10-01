@@ -25,6 +25,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "/Users/william/Desktop/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Dominio/HospiEnCasa.App.Dominio.csproj": {
+                "projectPath": "/Users/william/Desktop/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Dominio/HospiEnCasa.App.Dominio.csproj"
+              },
               "/Users/william/Desktop/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Persistencia/HospiEnCasa.App.Persistencia.csproj": {
                 "projectPath": "/Users/william/Desktop/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Persistencia/HospiEnCasa.App.Persistencia.csproj"
               }
