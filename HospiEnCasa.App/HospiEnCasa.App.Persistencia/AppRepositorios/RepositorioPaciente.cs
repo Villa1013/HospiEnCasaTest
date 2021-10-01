@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using HospiEnCasa.App.Dominio;
 using System.Linq;
+using System;
+// using HospiEnCasa.App.Persistencia;
+
 
 namespace HospiEnCasa.App.Persistencia
 {
@@ -23,7 +26,7 @@ namespace HospiEnCasa.App.Persistencia
         }
         Paciente IRepositorioPaciente.UpdatePaciente(Paciente paciente)
         {
-            var pacienteEncontrado = _appContext.Pacientes.FirstOrDefault(p => p.Id == idPaciente);
+            var pacienteEncontrado = _appContext.Pacientes.FirstOrDefault(p => p.Id == paciente.Id);
             if (pacienteEncontrado!=null)
             {
                 pacienteEncontrado.Nombre=paciente.Nombre;
@@ -47,7 +50,7 @@ namespace HospiEnCasa.App.Persistencia
         }
         void IRepositorioPaciente.DeletePaciente(int idPaciente)
         {
-            var pacienteEncontrado = _appContext.Paciente.FirstOrDefault(p => p.Id == idPaciente);
+            var pacienteEncontrado = _appContext.Pacientes.FirstOrDefault(p => p.Id == idPaciente);
             if(pacienteEncontrado == null) 
             return;
             _appContext.Pacientes.Remove(pacienteEncontrado);
