@@ -1,5 +1,7 @@
-using System.Collections.Generic;
-using HospiEnCasa.App.Dominio;
+// using System.Collections.Generic;
+// using HospiEnCasa.App.Dominio;
+using System.ComponentModel.Composition;
+using System.Diagnostics;
 
 namespace HospiEnCasa.App.Persistencia
 {
@@ -14,6 +16,8 @@ namespace HospiEnCasa.App.Persistencia
         void DeletePaciente(int idPaciente);
 
         Paciente GetPaciente(int idPaciente);
+
+        // Medico GetPaciente(int idPaciente);
 
     }
 }
