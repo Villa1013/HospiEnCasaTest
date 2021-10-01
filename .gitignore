@@ -2,5 +2,9 @@ node_modules
 .DS_Store
 
 #Folders
-*/bin
-*/obj
+/bin
+/obj
+
+
+# macOS Files
+.DS_Store

@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using HospiEnCasa.App.Dominio;
 using System.Linq;
 using System;
-// using HospiEnCasa.App.Persistencia;
+using HospiEnCasa.App.Persistencia;
 
 
 namespace HospiEnCasa.App.Persistencia
 {
     public class RepositorioPaciente:IRepositorioPaciente 
     {
-        private readonly AppContext _appContext;
+        private readonly HospiEnCasa.App.Persistencia.AppContext _appContext;
 
-        public RepositorioPaciente(AppContext appContext){
+        public RepositorioPaciente(HospiEnCasa.App.Persistencia.AppContext appContext){
             _appContext=appContext;
         }
 
