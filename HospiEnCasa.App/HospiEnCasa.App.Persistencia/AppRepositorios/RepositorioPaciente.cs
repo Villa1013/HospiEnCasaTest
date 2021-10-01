@@ -5,14 +5,15 @@ using System.Linq;
 
 namespace HospiEnCasa.App.Persistencia
 {
-    private readonly AppContext _appContext;
-
-    public RepositorioPaciente(AppContext appContext){
-        _appContext=appContext;
-    }
-
     public class RepositorioPaciente:IRepositorioPaciente 
     {
+        private readonly AppContext _appContext;
+
+        public RepositorioPaciente(AppContext appContext){
+            _appContext=appContext;
+        }
+
+
         Paciente IRepositorioPaciente.AddPaciente(Paciente paciente)
         {
             // throw new System.NotImplementedExeption();
