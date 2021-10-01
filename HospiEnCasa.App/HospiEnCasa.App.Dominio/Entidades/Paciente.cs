@@ -12,21 +12,19 @@ namespace HospiEnCasa.App.Dominio
         public float Longitud {get;set;}
         public string Ciudad {get;set;}
         public DateTime FechaNacimiento {get;set;}
-        // public FamiliarDesignado Familiar {get;set;}
-        // public Enfermera Enfermera {get;set;}
-        // public Medico Medico {get;set;}
-        // public Historia Historia {get;set;}
+
+        public FamiliarDesignado Familiar {get;set;}
+        public Enfermera Enfermera {get;set;}
+        public Medico Medico {get;set;}
+        public Historia Historia {get;set;}
         
-        public string Especialidad {get;set;}
-        public string Codigo {get;set;}
-        public string RegistroRethus {get;set;}
-        public string Historia {get;set;}
+        // public string Especialidad {get;set;}
+        // public string Codigo {get;set;}
+        // public string RegistroRethus {get;set;}
         
-        
-        
-        public string Medico {get;set;}
-        public string Familiar {get;set;}
-        
-        public string Enfermera {get;set;}
+        // public string Historia {get;set;}
+        // public string Medico {get;set;}
+        // public string Familiar {get;set;}
+        // public string Enfermera {get;set;}
     }
 }

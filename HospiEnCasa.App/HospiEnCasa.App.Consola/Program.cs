@@ -33,7 +33,7 @@ namespace HospiEnCasa.App.Consola
         private static void BuscarPaciente(int idPaciente) 
         {
             var paciente = _repoPaciente.GetPaciente(idPaciente);
-            Consola.WriteLine(paciente.Nombre + " "+paciente.Apellidos);
+            Console.WriteLine(paciente.Nombre+ " "+paciente.Apellidos);
         }
     }
 }

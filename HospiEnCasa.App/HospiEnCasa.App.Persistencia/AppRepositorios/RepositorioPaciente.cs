@@ -13,20 +13,21 @@ namespace HospiEnCasa.App.Persistencia
         private readonly HospiEnCasa.App.Persistencia.AppContext _appContext;
 
         public RepositorioPaciente(HospiEnCasa.App.Persistencia.AppContext appContext){
-            _appContext=appContext;
+            _appContext = appContext;
         }
 
 
         Paciente IRepositorioPaciente.AddPaciente(Paciente paciente)
         {
             // throw new System.NotImplementedExeption();
-            var pacienteAdicionado = _appContext.Pacientes.Add(paciente);
+            Console.WriteLine(paciente);
+            var pacienteAdicionado = _appContext.Paciente.Add(paciente);
             _appContext.SaveChanges();
             return pacienteAdicionado.Entity;
         }
         Paciente IRepositorioPaciente.UpdatePaciente(Paciente paciente)
         {
-            var pacienteEncontrado = _appContext.Pacientes.FirstOrDefault(p => p.Id == paciente.Id);
+            var pacienteEncontrado = _appContext.Paciente.FirstOrDefault(p => p.Id == paciente.Id);
             if (pacienteEncontrado!=null)
             {
                 pacienteEncontrado.Nombre=paciente.Nombre;
@@ -50,20 +51,20 @@ namespace HospiEnCasa.App.Persistencia
         }
         void IRepositorioPaciente.DeletePaciente(int idPaciente)
         {
-            var pacienteEncontrado = _appContext.Pacientes.FirstOrDefault(p => p.Id == idPaciente);
+            var pacienteEncontrado = _appContext.Paciente.FirstOrDefault(p => p.Id == idPaciente);
             if(pacienteEncontrado == null) 
             return;
-            _appContext.Pacientes.Remove(pacienteEncontrado);
+            _appContext.Paciente.Remove(pacienteEncontrado);
             _appContext.SaveChanges();
         }
         Paciente IRepositorioPaciente.GetPaciente(int idPaciente)
         {
-            var pacienteEncontrado = _appContext.Pacientes.FirstOrDefault(p => p.Id == idPaciente);
+            var pacienteEncontrado = _appContext.Paciente.FirstOrDefault(p => p.Id == idPaciente);
             return pacienteEncontrado;
         }
         IEnumerable<Paciente> IRepositorioPaciente.GetAllPaciente()
         {
-            return _appContext.Pacientes;
+            return _appContext.Paciente;
         }
         // ///<sumary>
         // /// Referencia al contexto paciente
@@ -81,33 +82,33 @@ namespace HospiEnCasa.App.Persistencia
         
         // Paciente IRepositorioPaciente.AddPaciente(Paciente paciente)
         // {
-        //     var PacienteAdicionado = _appContext.Pacientes.Add(paciente);
+        //     var PacienteAdicionado = _appContext.Paciente.Add(paciente);
         //     _appContext.SaveChanges();
         //     return PacienteAdicionado.Entity;
         // }
 
         // void IRepositorioPaciente.DeletePaciente(int idPaciente)
         // {
-        //     var pacienteEncontrado= _appContext.Pacientes.FirstOrDefault(p => p.Id == idPaciente);
+        //     var pacienteEncontrado= _appContext.Paciente.FirstOrDefault(p => p.Id == idPaciente);
         //     if(pacienteEncontrado == null) 
         //         return;
-        //     _appContext.Pacientes.Remove(pacienteEncontrado);
+        //     _appContext.Paciente.Remove(pacienteEncontrado);
         //     _appContext.SaveChanges();
         // }
 
         // IEnumerable<Paciente> IRepositorioPaciente.GetAllPaciente()
         // {
-        //     return _appContext.Pacientes;
+        //     return _appContext.Paciente;
         // }
 
         // Paciente IRepositorioPaciente.GetPaciente(int idPaciente)
         // {
-        //     return _appContext.Pacientes.FirstOrDefault(p => p.Id == idPaciente);
+        //     return _appContext.Paciente.FirstOrDefault(p => p.Id == idPaciente);
         // }
 
         // Paciente IRepositorioPaciente.UpdatePaciente(Paciente paciente)
         // {
-        //     var pacienteEncontrado = _appContext.Pacientes.FirstOrDefault(p => p.Id == paciente.Id);
+        //     var pacienteEncontrado = _appContext.Paciente.FirstOrDefault(p => p.Id == paciente.Id);
         //     if (pacienteEncontrado!=null)
         //     {
         //         pacienteEncontrado.Nombre=paciente.Nombre;
